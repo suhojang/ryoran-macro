@@ -3,14 +3,14 @@
 G123 「백화요란 검희 연대기」의 **보석채취**(트루 쉐도우 → 농장 → 위탁)를 자동으로 진행하는 프로그램입니다.
 
 - 설정한 별 이상(기본 ★5)의 **다이아 위탁 농장**이 나올 때까지 목록을 갱신하고, 수익 가산 %가 높은 검희부터 배치합니다.
-- 남은 위탁 횟수를 모두 쓸 때까지 반복하고, 위탁이 끝나면 보상을 수령한 뒤 **메인 화면으로 돌아옵니다**.
+- 남은 위탁 횟수를 모두 쓰면 **메인 화면으로 돌아와 자동으로 끝납니다**. (위탁 중인 검희의 보상은 시간이 되면 게임에서 자동 지급)
 - **즉시 시작** 또는 **매일 정해진 시각 예약**으로 실행할 수 있고, 진행 내역은 날짜별 로그 파일로 남습니다.
 
 ## 다운로드
 
 | 컴퓨터 | 다운로드 |
 |---|---|
-| 윈도우 (64비트) | **[RyoranMacro-win32-x64.zip](https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro-win32-x64.zip)** (약 150MB) |
+| 윈도우 (64비트) | **[RyoranMacro-Setup.exe](https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro-Setup.exe)** (설치 프로그램, 약 115MB) |
 | 맥 – Apple Silicon (M1·M2·M3·M4…) | **[RyoranMacro-darwin-arm64.zip](https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro-darwin-arm64.zip)** (약 120MB) |
 | 맥 – Intel | **[RyoranMacro-darwin-x64.zip](https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro-darwin-x64.zip)** (약 130MB) |
 
@@ -21,9 +21,10 @@ G123 「백화요란 검희 연대기」의 **보석채취**(트루 쉐도우 �
 ## 설치·실행
 
 ### 윈도우
-1. zip 파일의 압축을 원하는 폴더에 풉니다.
-2. 폴더 안의 `RyoranMacro.exe`를 실행합니다.
+1. 받은 `RyoranMacro-Setup.exe`를 실행합니다.
    - **"Windows의 PC 보호"** 창이 뜨면 **추가 정보 → 실행**을 누르세요. (코드 서명이 없는 프로그램이라 나오는 경고입니다)
+2. 자동으로 설치되고 프로그램이 실행됩니다. 바탕화면과 시작 메뉴에 **백화요란 매크로** 바로가기가 생깁니다. (관리자 권한 불필요)
+3. 새 버전이 나오면 새 `RyoranMacro-Setup.exe`를 실행하면 됩니다. 설정과 게임 로그인은 그대로 유지됩니다.
 
 ### 맥
 1. zip 파일을 더블클릭해 압축을 풀고, `RyoranMacro.app`을 **응용 프로그램** 폴더로 옮깁니다.
@@ -66,6 +67,19 @@ G123 「백화요란 검희 연대기」의 **보석채취**(트루 쉐도우 �
 - `Chrome(chrome.exe)을 찾을 수 없음` (윈도우): Chrome이 기본 위치(Program Files 또는 사용자 AppData)에 설치되어 있어야 합니다.
 - `메인 화면에 트루 쉐도우 버튼이 없음`: 매크로 전용 Chrome에 다른 계정(또는 트루 쉐도우가 아직 열리지 않은 계정)이 로그인되어 있습니다. [게임 창 열기]로 계정을 확인하세요.
 - `게임 창이 화면에 보이지 않음`: 매크로용 Chrome 창을 화면에 보이게 둔 뒤 다시 시작하세요.
+
+## 삭제
+
+### 윈도우
+**설정 → 앱 → 설치된 앱**(또는 제어판의 프로그램 제거)에서 **백화요란 매크로 → 제거**를 누릅니다.
+- 제거 중 **"설정, 로그, 매크로용 Chrome 로그인 정보도 함께 삭제할까요?"** 창이 뜹니다. **예**를 누르면 모두 지우고, **아니요**를 누르면 다시 설치했을 때 그대로 사용할 수 있습니다. (먼저 매크로용 Chrome 창을 닫아 주세요)
+
+### 맥
+1. 메뉴바의 다이아 아이콘 → **종료**로 앱을 끈 뒤, 응용 프로그램 폴더의 `RyoranMacro.app`을 휴지통에 넣습니다.
+2. 설정·로그·로그인 정보까지 지우려면 Finder에서 **이동 → 폴더로 이동**(⇧⌘G)으로 아래 폴더를 찾아 지웁니다.
+   - `~/Library/Application Support/RyoranMacro`
+   - `~/Library/Logs/RyoranMacro`
+   - `~/.ryoran-macro`
 
 ## 주의
 
