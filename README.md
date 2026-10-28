@@ -55,6 +55,8 @@ G123 「백화요란 검희 연대기」의 **보석채취**(트루 쉐도우 �
    - **완료**를 누른 뒤 **시스템 설정 → 개인정보 보호 및 보안**으로 가서, 아래쪽의 RyoranMacro 항목 옆 **그래도 열기**를 누르고 암호를 입력합니다.
    - 또는 터미널에서 한 번 실행: `xattr -dr com.apple.quarantine /Applications/RyoranMacro.app`
 
+> 지금 쓰고 있는 버전은 창 왼쪽 아래와 창 제목에 `v1.5.1`처럼 표시됩니다 (1.5.1부터). 최신 버전은 [릴리즈 페이지](https://github.com/suhojang/ryoran-macro/releases/latest)에서 확인할 수 있습니다.
+
 ## 처음 한 번: 게임 로그인
 
 매크로는 평소 쓰는 Chrome과 분리된 **매크로 전용 Chrome**으로 게임을 조작합니다. 계정마다 전용 Chrome이 따로 있고, 처음 한 번은 그 창에서 로그인이 필요합니다.
