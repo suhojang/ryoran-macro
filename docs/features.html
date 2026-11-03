@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>기능 안내 · 백화요란 매크로</title>
-  <meta name="description" content="백화요란 매크로의 기능별 동작과 설정 화면: 일일 보상, 보석채취, 속성 시련·검희 특훈, 한정 보상, 주기 예약, 흑암 강림·유파 쟁탈전 등 경기.">
+  <meta name="description" content="백화요란 매크로의 기능별 동작과 설정 화면: 일일 보상, 보석채취, 속성 시련·검희 특훈, 한정 보상, 주기 예약, 팀 경기장, 흑암 강림·유파 쟁탈전 등 경기.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="기능 안내 · 백화요란 매크로">
   <meta property="og:description" content="기능마다 무엇을 하고 어떻게 설정하는지 — 설정 화면과 함께">
@@ -42,7 +42,7 @@
     <b>주기 예약</b>
     <a href="#periodic">주기 예약이란</a><a href="#guaji">방치 수익 · 오중탑 …</a>
     <b>경기 · 요일 예약</b>
-    <a href="#sdsl">흑암 강림</a><a href="#gvg">유파 쟁탈전</a><a href="#fz">학원 교류전</a><a href="#sjg">사검귀 습격</a><a href="#yc">학원 쟁패전</a>
+    <a href="#sdsl">흑암 강림</a><a href="#taTeam">팀 경기장</a><a href="#gvg">유파 쟁탈전</a><a href="#fz">학원 교류전</a><a href="#sjg">사검귀 습격</a><a href="#yc">학원 쟁패전</a>
     <b>공통</b>
     <a href="#common">모든 기능에 공통</a>
   </nav>
@@ -60,7 +60,7 @@
           <ul>
             <li><b>매일 보상</b>: 출석, 친구 금화, VIP·일일 특전 무료 패키지, 패스 일일 보상, 유파 출석·보스, 무료 소환, 무료 패키지, 임무 보상·활약도 상자, 메일. 서포트(St.8001)가 열린 계정은 게임 서포트의 [일괄 실행]으로 합니다.</li>
             <li><b>일일 콘텐츠</b>: 강적 시련(하루 5회), 식신 난투 랭크전(승리 보상 5회), 도장 연무, 퀴즈(1~3판), 오중탑, 속성 시련·검희 특훈 소탕, 환상 경계 구조, 흑암 강림 정예·전설 혼자 도전, 각력 단련, 도감, 유파 기술, 일일 임무 채우기(깃털·초대장).</li>
-            <li><b>이벤트</b>: 열린 이벤트의 무료 보상과 이벤트 아이템 사용(추첨·모집 횟수 제한은 이벤트 메뉴에서).</li>
+            <li><b>이벤트</b>: 열린 이벤트의 무료 보상과 이벤트 아이템 사용(추첨·모집 횟수 제한은 이벤트 메뉴에서). 맨 끝에 한 번 더 — 그 뒤 퀴즈·도장 연무 등으로 끝난 이벤트 일일 임무 보상도 받습니다.</li>
           </ul>
           <div class="set"><b>다이아를 쓰는 항목 (켤 때만)</b>유파 보스 추가 도전(하루 1~3회) · 금화 구매 · 도장 연무 상대 찾기 · 일일 상점(무혼 결정 1회, 또는 게임 자동 구매 + 상점 갱신 횟수)</div>
         </div>
@@ -123,7 +123,7 @@
             <li><b>쇼핑 주</b>: 무료 「광연 특전」(다이아 500)을 받고, 품목마다 살 개수와 <b>구매 순서</b>(▲▼)를 정합니다. 다이아가 모자라면 기다리거나 건너뛰고, <b>남길 다이아</b>를 정할 수 있습니다.</li>
             <li><b>쇼핑 주 마지막 날</b>: 남은 구매권을 비싼 상품부터 교환합니다.</li>
           </ul>
-          <p class="muted small">아이템·다이아가 모자라 다 못 했으면 확인 간격마다 다시 보고 이어서 합니다. 현금 결제 패키지는 사지 않습니다.</p>
+          <p class="muted small">아이템·다이아가 모자라 다 못 했으면 확인 간격마다 다시 보고 이어서 합니다. 설정을 바꾸면 5분 뒤에 다시 봅니다. 현금 결제 패키지는 사지 않습니다.</p>
         </div>
         <figure class="shot panel"><img loading="lazy" src="img/panel-tunhuo.webp" alt="한정 보상 설정 화면"></figure>
       </article>
@@ -132,7 +132,7 @@
     <section class="chap" id="periodic">
       <p class="kicker">주기 예약</p>
       <h2>쌓이는 보상은 고른 간격마다</h2>
-      <p>시간이 지나면 쌓이다가 상한에서 멈추는 것을 고른 간격마다 따로 합니다. <b>켠 항목은 06:00 일일 보상에서 빠지고, 끄면 일일 보상 때 하루 1번</b> 합니다. 처음 켜면 바로 한 번 하고, 그 뒤로는 마지막으로 한 시각부터 셉니다. 끝날 때마다 임무 보상·활약도 상자도 받아 둡니다. 「오늘」 화면에서도 바로 켜고 간격을 바꿀 수 있습니다.</p>
+      <p>시간이 지나면 쌓이다가 상한에서 멈추는 것을 고른 간격마다 따로 합니다. <b>켠 항목은 06:00 일일 보상에서 빠지고, 끄면 일일 보상 때 하루 1번</b> 합니다. 처음 켜면 바로 한 번 하고, 그 뒤로는 마지막으로 한 시각부터 셉니다. 끝날 때마다 임무 보상·활약도 상자·이벤트 임무 보상·친구 금화·메일 보상도 받아 둡니다 (이벤트 아이템은 이벤트 설정대로). 「오늘」 화면에서도 바로 켜고 간격을 바꿀 수 있습니다.</p>
       <div class="mini-grid">
         <div class="mini" id="guaji"><div class="feat-h"><i data-i="clock"></i><div><h3>방치 수익</h3><div class="when">1~8시간마다 (기본 4시간)</div></div></div><p>방치 수익을 받습니다. 레벨업할 수 있으면 먼저 레벨업합니다. 수익은 최대 4시간(특권이 있으면 8시간)까지 쌓입니다.</p><button class="see" type="button" data-zoom="img/panel-guaji.webp" data-alt="방치 수익 설정">설정 화면 보기 →</button></div>
         <div class="mini" id="pata"><div class="feat-h"><i data-i="tower"></i><div><h3>오중탑</h3><div class="when">5시간마다</div></div></div><p>도전권을 모두 써서 도전하고 10층마다 도달 보상을 받습니다. 도전권은 30분에 1개, 최대 10개.</p><button class="see" type="button" data-zoom="img/panel-pata.webp" data-alt="오중탑 설정">설정 화면 보기 →</button></div>
@@ -165,6 +165,35 @@
           <p class="muted small">혼자 하는 정예·전설 난이도는 매일 일일 보상에서 합니다.</p>
         </div>
         <figure class="shot panel"><img loading="lazy" src="img/panel-sdsl.webp" alt="흑암 강림 설정 화면"></figure>
+      </article>
+
+      <article class="feat" id="taTeam">
+        <div>
+          <div class="feat-h"><i data-i="users"></i><div><h3>팀 경기장 팀 만들기</h3><div class="when">켰을 때 매주 월요일 08:00</div></div></div>
+          <div class="tags"><span class="chip warn">테스트</span><span class="chip ok">일반 등급부터</span></div>
+          <p>임무의 「단체 경기」입니다. 월요일(신청 단계)에 <b>팀을 만들고 유파 동료를 모두 초대</b>해, 3명이 찬 팀을 제출합니다.</p>
+          <ul>
+            <li>3명이 찰 때까지 <b>최대 30분</b> 기다리고, 그래도 안 차면 <b>신청 목록에서 전투력이 높은 사람부터 승인</b>합니다.</li>
+            <li>이미 이번 주 팀의 대장이면 그 팀으로 이어서 하고, 다른 사람 팀의 팀원이거나 이미 제출했으면 아무것도 하지 않습니다.</li>
+            <li>3명을 못 채우면 실패로 남기고, 팀 경기장 도전 때 다시 승인해 제출합니다.</li>
+          </ul>
+          <div class="set"><b>팀 설정</b>팀 이름(최대 7자, 비우면 게임 닉네임) · 가입 방식(승인 필요/누구나 가입) · 전력 조건 · 도전 권한(개방/금지)</div>
+        </div>
+        <figure class="shot panel"><img loading="lazy" src="img/panel-taTeam.webp" alt="팀 경기장 팀 만들기 설정 화면"></figure>
+      </article>
+
+      <article class="feat" id="teamarena">
+        <div>
+          <div class="feat-h"><i data-i="trophy"></i><div><h3>팀 경기장 도전</h3><div class="when">켰을 때 화·수·목 고른 시각 (13~23시, 기본 13:00)</div></div></div>
+          <div class="tags"><span class="chip ok">일반 등급부터</span></div>
+          <p>포인트전(화 00:00~금 00:00) 동안 팀이 하루 10회 도전합니다. 고른 시각에 <b>그날 남은 횟수를 모두</b> 씁니다. 싸움은 서버가 해서 바로 끝납니다.</p>
+          <ul>
+            <li>이번 주 팀의 대장이거나, 대장이 도전 권한을 개방한 팀원일 때만 도전합니다. 권한을 개방했으면 그 시각 전까지 팀원이 먼저 쓸 수 있습니다.</li>
+            <li>상대는 우리 팀보다 전력이 낮은 팀 중 Pt가 가장 높은 팀(없으면 전력이 가장 낮은 팀)입니다.</li>
+            <li>대장인데 팀이 아직 제출되지 않았으면 신청자를 승인해 채우고 제출한 뒤 도전합니다.</li>
+          </ul>
+        </div>
+        <figure class="shot panel"><img loading="lazy" src="img/panel-teamarena.webp" alt="팀 경기장 도전 설정 화면"></figure>
       </article>
 
       <article class="feat" id="gvg">
