@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>백화요란 매크로</title>
-  <meta name="description" content="백화요란 검희 연대기의 일일 보상·보석채취·주기 예약·팀 경기장·경기까지 계정마다 정한 시각에 자동으로 진행하는 윈도우·맥 프로그램. 기능 안내와 사용설명서.">
+  <meta name="description" content="백화요란 검희 연대기의 일일 보상·보석채취·주기 예약·팀 경기장·경기까지 계정마다 정한 시각에 자동으로 진행하는 윈도우·맥 프로그램과 안드로이드 앱. 기능 안내와 사용설명서.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="백화요란 매크로">
   <meta property="og:description" content="켜 두면 예약대로 — 일일 보상·보석채취·주기 예약·경기 자동 진행. 기능 안내와 사용설명서">
@@ -30,16 +30,17 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">G123 「백화요란 검희 연대기」 · 윈도우 · 맥</span>
+      <span class="eyebrow">G123 「백화요란 검희 연대기」 · 윈도우 · 맥 · 안드로이드</span>
       <h1>켜 두면 <em>예약대로</em>,<br>백화요란 하루 일과를 자동으로</h1>
       <p class="lead">일일 보상과 보석채취, 방치 수익·오중탑 같은 주기 보상, 유파 쟁탈전 같은 경기까지. 계정마다 정한 시각에 매크로가 알아서 진행하고, 무엇을 했는지 한눈에 보여 줍니다.</p>
       <div class="dl-row" data-dl-row>
         <a class="btn btn-main" data-os="win" href="https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro-Setup.exe"><i data-i="windows"></i><span>윈도우용 다운로드<small>설치 프로그램 · <span data-size="RyoranMacro-Setup.exe">약 115MB</span></small></span></a>
         <a class="btn btn-line" data-os="mac" href="guide.html#download"><i data-i="apple"></i><span>맥용 다운로드<small>Apple Silicon · Intel</small></span></a>
+        <a class="btn btn-line" data-os="android" href="https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro.apk"><i data-i="android"></i><span>안드로이드용 다운로드<small>APK · 베타 · <span data-size="RyoranMacro.apk">약 18MB</span></small></span></a>
         <a class="btn btn-line" href="guide.html"><i data-i="log"></i><span>사용설명서</span></a>
       </div>
       <div class="ver" data-ver>최신 버전은 <a href="https://github.com/suhojang/ryoran-macro/releases/latest" style="color:inherit">릴리즈 페이지</a>에서 확인할 수 있습니다.</div>
-      <div class="mobile-note">윈도우 PC나 맥에서 설치하는 프로그램입니다. 이 페이지를 PC에서 열어 내려받으세요.</div>
+      <div class="mobile-note"><span class="for-android">안드로이드 휴대폰은 위 [안드로이드용 다운로드]로 바로 설치합니다. 카카오톡 안에서 받기가 안 되면 오른쪽 위 ⋮ → 다른 브라우저로 열기 뒤에 받으세요. <a href="guide.html#android" style="color:inherit">설치 방법 →</a></span><span class="for-other">아이폰(iOS)용 앱은 없습니다. 윈도우 PC·맥에서 내려받거나 안드로이드 휴대폰에서 이 페이지를 여세요.</span></div>
       <div class="hero-shot">
         <div class="frame">
           <div class="frame-bar"><i></i><i></i><i></i></div>
@@ -149,20 +150,47 @@
     </div>
   </section>
 
-  <section class="band alt">
-    <div class="wrap">
-      <p class="kicker">시작하기</p>
-      <h2 class="title">세 단계면 준비 끝</h2>
-      <p class="desc">자세한 순서와 화면은 <a href="guide.html">사용설명서</a>에 있습니다.</p>
-      <div class="steps">
-        <div class="step"><h3>설치</h3><p>윈도우는 설치 프로그램을 실행하고, 맥은 압축을 풀어 응용 프로그램 폴더로 옮깁니다. Google Chrome이 있어야 합니다.</p><p style="margin-top:12px"><a href="guide.html#download">다운로드와 설치 →</a></p></div>
-        <div class="step"><h3>매크로 로그인</h3><p>관리자에게 받은 아이디·비밀번호로 로그인합니다. 로그인하지 않으면(게스트) 보석채취만 쓸 수 있습니다.</p><p style="margin-top:12px"><a href="guide.html#login">로그인과 등급 →</a></p></div>
-        <div class="step"><h3>게임 계정 연결 · 기능 켜기</h3><p>계정 관리의 [로그인]으로 매크로 전용 Chrome에서 G123에 한 번 로그인하고, 기능 설정에서 쓸 기능을 켭니다.</p><p style="margin-top:12px"><a href="guide.html#game-login">게임 계정 연결 →</a></p></div>
+  <section class="band alt" id="android">
+    <div class="wrap droid">
+      <div>
+        <p class="kicker">안드로이드 앱 <span class="beta">베타</span></p>
+        <h2 class="title">PC가 없어도, 휴대폰 하나로</h2>
+        <p class="desc" style="margin-bottom:24px">같은 기능과 같은 설정 화면을 안드로이드 앱으로도 씁니다. 게임은 앱 안의 보이지 않는 창에서 돌아가서, 매크로가 도는 동안에도 휴대폰으로 다른 일을 할 수 있습니다.</p>
+        <ul class="ticks">
+          <li>PC 앱과 같은 기능·예약·기록 — 화면만 휴대폰에 맞췄습니다 (아래 탭, 기능 목록 → 설정 한 화면씩).</li>
+          <li>앱 화면을 닫아도, 화면이 꺼져도 알림 표시줄의 「백화요란 매크로」로 남아 예약을 지키고, 알림에 지금 실행 중인 기능과 다음 예약이 보입니다. 휴대폰을 다시 켜면 뒤에서 다시 시작하고(끌 수 있음), 알림의 [매크로 종료]로 바로 끌 수 있습니다.</li>
+          <li>게임 계정은 [로그인]으로 뜬 게임 화면에서 한 번만 로그인합니다. 그다음부터 게임 화면은 보이지 않게 돌아갑니다.</li>
+          <li>같은 매크로 아이디로 PC와 함께 쓸 수 있습니다. 휴대폰은 PC와 따로 대수를 셉니다.</li>
+          <li>새 버전이 나오면 알림을 눌러 업데이트합니다.</li>
+        </ul>
+        <div class="dl-row">
+          <a class="btn btn-ink" href="https://github.com/suhojang/ryoran-macro/releases/latest/download/RyoranMacro.apk"><i data-i="android"></i><span>안드로이드용 다운로드<small>APK · <span data-size="RyoranMacro.apk">약 18MB</span></small></span></a>
+          <a class="btn btn-soft" href="guide.html#android"><span>설치 방법</span></a>
+        </div>
+        <p class="muted small" style="margin:16px 0 0">안드로이드 8.0 이상. 기능이 도는 동안 게임 계정 하나에 메모리를 1GB쯤 쓰니 메모리가 넉넉한 휴대폰을 권합니다. 아이폰은 지원하지 않습니다. 베타라서 경기 기능 등 일부는 휴대폰에서 아직 확인하고 있습니다.</p>
+      </div>
+      <div class="phone-row">
+        <figure class="phone"><div class="ph"><picture><source srcset="img/phone-home-dark.webp" media="(prefers-color-scheme: dark)"><img loading="lazy" src="img/phone-home.webp" width="780" height="1688" alt="안드로이드 앱의 오늘 화면"></picture></div><figcaption>오늘</figcaption></figure>
+        <figure class="phone"><div class="ph"><img loading="lazy" src="img/phone-daily.webp" width="780" height="1688" alt="안드로이드 앱의 기능 설정 화면 (일일 보상)"></div><figcaption>기능 설정</figcaption></figure>
+        <figure class="phone"><div class="ph"><img loading="lazy" src="img/phone-logs.webp" width="780" height="1688" alt="안드로이드 앱의 기록 화면"></div><figcaption>기록</figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="band">
+    <div class="wrap">
+      <p class="kicker">시작하기</p>
+      <h2 class="title">세 단계면 준비 끝</h2>
+      <p class="desc">자세한 순서와 화면은 <a href="guide.html">사용설명서</a>에 있습니다.</p>
+      <div class="steps">
+        <div class="step"><h3>설치</h3><p>윈도우는 설치 프로그램을 실행하고, 맥은 압축을 풀어 응용 프로그램 폴더로 옮깁니다(Google Chrome이 있어야 함). 안드로이드는 APK를 받아 설치합니다.</p><p style="margin-top:12px"><a href="guide.html#download">다운로드와 설치 →</a></p></div>
+        <div class="step"><h3>매크로 로그인</h3><p>관리자에게 받은 아이디·비밀번호로 로그인합니다. 로그인하지 않으면(게스트) 보석채취만 쓸 수 있습니다.</p><p style="margin-top:12px"><a href="guide.html#login">로그인과 등급 →</a></p></div>
+        <div class="step"><h3>게임 계정 연결 · 기능 켜기</h3><p>계정 관리의 [로그인]으로 매크로 전용 Chrome(안드로이드는 앱의 게임 화면)에서 G123에 한 번 로그인하고, 기능 설정에서 쓸 기능을 켭니다.</p><p style="margin-top:12px"><a href="guide.html#game-login">게임 계정 연결 →</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
     <div class="wrap">
       <p class="kicker">등급</p>
       <h2 class="title">아이디 등급에 따라 쓸 수 있는 기능</h2>
@@ -181,12 +209,14 @@
     </div>
   </section>
 
-  <section class="band alt">
+  <section class="band">
     <div class="wrap" style="max-width:860px">
       <p class="kicker">자주 묻는 질문</p>
       <h2 class="title" style="margin-bottom:24px">궁금한 점</h2>
       <details class="faq"><summary>컴퓨터를 계속 켜 둬야 하나요?</summary><div><p>예약 시각에 앱이 켜져 있어야 실행됩니다. 앱이나 컴퓨터가 꺼져 있었으면(절전 포함) 켜지는 대로 놓친 예약을 이어서 합니다 — 보석채취·일일 보상·속성 시련·검희 특훈은 그날 자정 전까지, 흑암 강림은 다음 예약일 전까지.</p><p>유파 쟁탈전 같은 경기는 경기 시각에만 할 수 있으니 그 시간에는 절전되지 않게 해 주세요.</p></div></details>
       <details class="faq"><summary>다이아를 마음대로 쓰지 않나요?</summary><div><p>다이아를 쓰는 항목(유파 보스 추가 도전, 금화 구매, 일일 상점, 한정 보상 상점, 경기 이동 가속 등)은 설정 화면에 다이아 표시가 붙어 있고, 켠 항목에만 씁니다. 현금 결제 패키지는 사지 않습니다.</p></div></details>
+      <details class="faq"><summary>휴대폰에서도 쓸 수 있나요?</summary><div><p>안드로이드 휴대폰은 <a href="#android">안드로이드 앱</a>(베타)으로 PC 없이 씁니다. 기능과 화면은 PC 앱과 같습니다. 아이폰용은 없습니다.</p></div></details>
+      <details class="faq"><summary>안드로이드 앱이 돌면 휴대폰을 못 쓰나요?</summary><div><p>아닙니다. 매크로는 뒤에서 돌고 게임 화면도 보이지 않아서 카카오톡·유튜브 같은 다른 앱을 평소처럼 쓸 수 있습니다. 알림 표시줄에 「백화요란 매크로」 알림 하나가 남습니다.</p><p>기능이 도는 동안에는 게임 계정 하나에 메모리를 1GB쯤 쓰고 배터리와 데이터를 씁니다. 기능이 끝나고 1분이 지나면 게임 창을 닫아 메모리를 돌려줍니다. 매크로를 끄려면 알림의 [매크로 종료]를 누르고, 휴대폰을 켤 때 저절로 시작하지 않게 하려면 앱의 계정 관리에서 끕니다. 같은 게임 계정으로 휴대폰에서 직접 게임하면 아래처럼 서로 접속이 끊깁니다.</p></div></details>
       <details class="faq"><summary>휴대폰으로 같은 계정에 접속해도 되나요?</summary><div><p>다른 곳에서 같은 게임 계정으로 접속하면 매크로 쪽 게임이 끊깁니다. 매크로는 바로 다시 접속하지 않고 30분을 기다렸다가 다시 접속합니다(경기 중에는 바로 다시 접속). 더 일찍 이어 가려면 매크로 Chrome 게임 창에서 [확인]을 누르세요.</p></div></details>
       <details class="faq"><summary>업데이트는 어떻게 하나요?</summary><div><p>앱이 1시간마다 새 버전을 확인해 스스로 업데이트합니다. 실행 중인 기능이 끝난 뒤 잠깐 꺼졌다 다시 켜지고, 경기 15분 전부터 경기가 끝날 때까지는 업데이트하지 않습니다. 설정과 게임 로그인은 그대로 유지됩니다.</p></div></details>
       <details class="faq"><summary>게임 창을 봐도 되나요?</summary><div><p>매크로 전용 Chrome 창은 다른 창에 가려져 있어도 동작하고, 최소화되어 있으면 자동으로 되돌립니다. 매크로가 도는 동안 그 창을 직접 누르면 매크로 조작과 겹칠 수 있으니 지켜보기만 해 주세요.</p></div></details>

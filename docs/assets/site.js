@@ -38,6 +38,7 @@
     refresh: 'M20 11a8 8 0 0 0-14.6-4.5 M4 4v4h4 M4 13a8 8 0 0 0 14.6 4.5 M20 20v-4h-4',
     download: 'M12 4v11 M7 10l5 5 5-5 M5 20h14',
     windows: 'M3 5.5l7.5-1v7H3z M12 4.3 21 3v8.5h-9z M3 12.5h7.5v7L3 18.5z M12 12.5h9V21l-9-1.3z',
+    android: 'M4.5 18a7.5 7.5 0 0 1 15 0z M7.6 10.4 5.8 7.6 M16.4 10.4l1.8-2.8 M9 14.6h.01 M15 14.6h.01',
     apple: 'M16.5 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.8-3-.8C7 7.4 5.6 8.3 4.8 9.7c-1.6 2.8-.4 6.9 1.1 9.2.8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.8z M14.3 5.6c.6-.8 1.1-1.8 1-2.9-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.8 1 .1 2.1-.5 2.7-1.3z',
   };
   const FILLED = new Set(['windows', 'apple', 'play']);
@@ -51,15 +52,22 @@
       : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
   }
 
-  // 컴퓨터 종류: 맥이면 맥 다운로드를 먼저, 휴대폰이면 안내
+  // 기기 종류: 맥이면 맥 다운로드를, 안드로이드 휴대폰이면 안드로이드 다운로드를 먼저. 그 밖의 휴대폰(아이폰)은 안내
   const ua = navigator.userAgent, mobile = /Android|iPhone|iPad|iPod|Mobile|KAKAOTALK/i.test(ua) && !/Macintosh/.test(ua);
+  const android = /Android/i.test(ua);
   const mac = /Macintosh|Mac OS X/.test(ua) && !mobile;
+  const os = android ? 'android' : mac ? 'mac' : mobile ? null : 'win';
   if (mobile) document.documentElement.classList.add('is-mobile');
+  if (android) document.documentElement.classList.add('is-android');
   if (mac) document.documentElement.classList.add('is-mac');
   for (const row of document.querySelectorAll('[data-dl-row]')) {
-    if (mac) { const w = row.querySelector('[data-os="win"]'); if (w) { row.append(w); w.classList.replace('btn-main', 'btn-line'); row.querySelector('[data-os="mac"]')?.classList.replace('btn-line', 'btn-main'); } }
+    const first = os && row.querySelector(`[data-os="${os}"]`);
+    if (!first || os === 'win') continue;
+    for (const b of row.querySelectorAll('[data-os]')) b.classList.replace('btn-main', 'btn-line');
+    first.classList.replace('btn-line', 'btn-main');
+    row.prepend(first);
   }
-  for (const c of document.querySelectorAll('[data-rec]')) if ((c.dataset.rec === 'mac') === mac && !mobile) c.classList.add('rec');
+  for (const c of document.querySelectorAll('[data-rec]')) if (c.dataset.rec === os) c.classList.add('rec');
 
   // 최신 버전 (GitHub 릴리즈)
   const verEls = document.querySelectorAll('[data-ver]');
@@ -109,7 +117,7 @@
   document.body.append(dlg);
   dlg.addEventListener('click', () => dlg.close());
   document.addEventListener('click', e => {
-    const img = e.target.closest('.shot img');
+    const img = e.target.closest('.shot img, .phone img');
     if (!img) return;
     const big = dlg.querySelector('img');
     big.src = img.currentSrc || img.src;
@@ -130,7 +138,7 @@
       for (const p of document.querySelectorAll(`[data-panel-of="${tabs.dataset.tabs}"]`)) p.hidden = p.dataset.panel !== id;
     };
     for (const b of btns) b.addEventListener('click', () => show(b.dataset.tab));
-    show(tabs.dataset.tabs === 'os' && mac ? 'mac' : btns[0].dataset.tab);
+    show(tabs.dataset.tabs === 'os' && (mac || android) ? (android ? 'android' : 'mac') : btns[0].dataset.tab);
   }
 
   // 목차: 지금 읽는 곳
