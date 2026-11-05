@@ -55,10 +55,12 @@
   // 기기 종류: 맥이면 맥 다운로드를, 안드로이드 휴대폰이면 안드로이드 다운로드를 먼저. 그 밖의 휴대폰(아이폰)은 안내
   const ua = navigator.userAgent, mobile = /Android|iPhone|iPad|iPod|Mobile|KAKAOTALK/i.test(ua) && !/Macintosh/.test(ua);
   const android = /Android/i.test(ua);
-  const mac = /Macintosh|Mac OS X/.test(ua) && !mobile;
+  const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);  // 아이패드는 맥처럼 보임
+  const mac = /Macintosh|Mac OS X/.test(ua) && !mobile && !ios;
   const os = android ? 'android' : mac ? 'mac' : mobile ? null : 'win';
   if (mobile) document.documentElement.classList.add('is-mobile');
   if (android) document.documentElement.classList.add('is-android');
+  if (ios) document.documentElement.classList.add('is-mobile', 'is-ios');
   if (mac) document.documentElement.classList.add('is-mac');
   for (const row of document.querySelectorAll('[data-dl-row]')) {
     const first = os && row.querySelector(`[data-os="${os}"]`);
@@ -68,6 +70,24 @@
     row.prepend(first);
   }
   for (const c of document.querySelectorAll('[data-rec]')) if (c.dataset.rec === os) c.classList.add('rec');
+
+  // 아이폰·아이패드: 안드로이드 APK를 받아도 설치할 수 없다 → 누르면 받지 않고 안내만
+  if (ios) {
+    let toast;
+    const say = text => {
+      toast ||= Object.assign(document.createElement('div'), { className: 'site-toast', role: 'status' });
+      toast.textContent = text;
+      document.body.append(toast);
+      toast.classList.add('show');
+      clearTimeout(say.t);
+      say.t = setTimeout(() => toast.classList.remove('show'), 4500);
+    };
+    for (const a of document.querySelectorAll('a[href$="RyoranMacro.apk"]')) {
+      a.classList.add('off');
+      a.setAttribute('aria-disabled', 'true');
+      a.addEventListener('click', e => { e.preventDefault(); say('안드로이드 휴대폰용 앱이라 아이폰·아이패드에는 설치할 수 없습니다. 안드로이드 휴대폰에서 이 페이지를 열어 받거나, 윈도우 PC·맥용을 쓰세요.'); });
+    }
+  }
 
   // 최신 버전 (GitHub 릴리즈)
   const verEls = document.querySelectorAll('[data-ver]');
