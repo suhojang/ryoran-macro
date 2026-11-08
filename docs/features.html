@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="기능 안내 · 요란 비서">
   <meta property="og:description" content="기능마다 무엇을 하고 어떻게 설정하는지 — 설정 화면과 함께">
-  <meta property="og:image" content="https://suhojang.github.io/ryoran-macro/img/og.png?v=4c176165">
+  <meta property="og:image" content="https://suhojang.github.io/ryoran-macro/img/og.png?v=4ab40b61">
   <meta name="theme-color" content="#16181D">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -120,7 +120,7 @@
       <h2>한정 보상</h2>
       <article class="feat" id="tunhuo">
         <div>
-          <div class="feat-h"><i data-i="crown"></i><div><h3>한정 보상</h3><div class="when">확인 간격마다 (기본 3시간)</div></div></div>
+          <div class="feat-h"><i data-i="crown"></i><div><h3>한정 보상</h3><div class="when">켜면 확인 간격마다 (3시간)</div></div></div>
           <div class="tags"><span class="chip">기본은 무료 보상만</span><span class="chip dia">상점 품목은 고른 것만</span></div>
           <p>게임 메인 화면의 「한정 보상」은 <b>추첨 목표 → 소환 대상 → 쇼핑</b>이 한 주씩 바뀝니다. 매일 무료 패키지와 목표 임무·유파 목표 보상(달성한 단계)을 받습니다.</p>
           <ul>
@@ -222,12 +222,12 @@
         <div>
           <div class="feat-h"><i data-i="swords"></i><div><h3>명장 쟁패전 편성</h3><div class="when">켰을 때만 · 월요일 12:05 첫 경기 준비 · 13:05 편성 · 매일 00:00 검희 정보</div></div></div>
           <div class="tags"><span class="chip ok">일반 등급부터</span></div>
-          <p>명장 쟁패전(도장 연무 상위 256위 본선 · 257~512위 차전)에 진출한 주에, 첫 준비 시간인 <b>월요일 13:05에 편성 3개를 한 번</b> 맞춥니다. 한 번 맞춘 편성은 결승까지 그대로 쓰입니다. 월 12:30 첫 경기 전(12:05)에는 1편성을 스토리 편성에 · 2·3편성을 편성 2·3에 넣고 게임의 <b>「메인 편성 동기화」</b>를 한 뒤 12:45에 원래대로 되돌립니다.</p>
+          <p>명장 쟁패전(도장 연무 상위 256위 본선 · 257~512위 차전)에 진출한 주에, 첫 준비 시간인 <b>월요일 13:05에 편성 3개를 한 번</b> 맞춥니다. 한 번 맞춘 편성은 결승까지 그대로 쓰입니다. 편성은 검희 화면 편성을 거쳐 게임의 <b>「메인 편성 동기화」</b>로 넣어(3편성 ← 스토리 편성 · 2편성 ← 편성 2 · 1편성 ← 편성 3) 그 편성의 <b>주인공 무기</b>가 함께 갑니다. 월 12:30 첫 경기 전(12:05)에 넣은 편성은 12:45에 원래대로 되돌립니다.</p>
           <ul>
             <li><b>자동</b>(기본): 3편성 = 쥬베이를 뺀 가장 강한 5명 · 2편성 = 쥬베이 + 쥬베이와 같은 속성에서 가장 강한 검희(모자라면 남은 가장 강한 검희) · 1편성 = 남은 가장 강한 5명.</li>
-            <li><b>수동</b>: 매일 00:00과 일일 보상 때 가져온 가진 검희 목록에서 편성마다 5명까지 고릅니다. [자동 편성으로 채우기]로 시작해 고칠 수 있습니다.</li>
+            <li><b>수동</b>: 매일 00:00과 일일 보상 때 가져온 가진 검희 목록에서 편성마다 5명까지 고릅니다. [자동 편성으로 채우기]로 시작해 고칠 수 있습니다. 편성마다 <b>무기</b>(스토리 편성·편성 2~5 중 어느 편성의 주인공 무기를 쓸지)도 고릅니다.</li>
             <li>자리는 스토리 편성 자리를 따릅니다(이 대회는 레벨·장비를 스토리 편성의 같은 자리 검희에게서 이어받음). 진출하지 않은 주에는 아무것도 하지 않습니다.</li>
-            <li>기본은 꺼짐입니다. 월 12:05~12:45에는 스토리 편성이 명장 1편성으로 바뀌어 있으니, 쓰는 계정만 켜 주세요.</li>
+            <li>기본은 꺼짐입니다. 월 12:05~12:45에는 스토리 편성이 명장 3편성으로 바뀌어 있으니, 쓰는 계정만 켜 주세요.</li>
           </ul>
         </div>
         <figure class="shot panel"><img loading="lazy" src="img/panel-myld.webp" alt="명장 쟁패전 편성 설정 화면"></figure>
@@ -235,7 +235,7 @@
 
       <article class="feat" id="jjdms">
         <div>
-          <div class="feat-h"><i data-i="flag"></i><div><h3>식신 파견</h3><div class="when">이벤트 기간(11/7~11/14) 동안 6시간마다 (기본 켬) · [지금 실행]</div></div></div>
+          <div class="feat-h"><i data-i="flag"></i><div><h3>식신 파견</h3><div class="when">켜면 이벤트 기간(11/7~11/14) 동안 6시간마다 · [지금 실행]</div></div></div>
           <p>이벤트 「식신 파견」의 본게임 <b>「진격의 식신」</b>을 합니다. 체력(2시간에 1개, 최대 10개)이 있는 만큼 판의 블록을 <b>탭</b>(레벨 업 → 같은 레벨 3개가 이어지면 융합)하거나 <b>군단으로 끌어</b> 걸음을 다 쓰고 [진군]합니다. 재화는 쓰지 않습니다.</p>
           <ul>
             <li>걸음마다 판을 미리 계산해, 융합 연쇄로 얻는 전투력이 가장 큰 수(다음 걸음까지 봄)를 고릅니다.</li>
@@ -249,7 +249,7 @@
 
       <article class="feat" id="pzjg">
         <div>
-          <div class="feat-h"><i data-i="cards"></i><div><h3>카드 게임</h3><div class="when">고른 요일·시각 (기본 켬 · 매일 12:00) · [지금 실행]</div></div></div>
+          <div class="feat-h"><i data-i="cards"></i><div><h3>카드 게임</h3><div class="when">켜면 고른 요일·시각 (기본 매일 12:00) · [지금 실행]</div></div></div>
           <div class="tags"><span class="chip warn">테스트</span><span class="chip ok">일반 등급부터</span></div>
           <p>이벤트 「카드 게임」(다우트)이 열려 있을 때 랭크전을 합니다. 실제 플레이어와 매칭되고, 요란 비서가 남은 카드를 세어 <b>특수 카드를 내거나 다우트</b>합니다. 판 초반에 쓸모없는 카드를 먼저 처분하고 특수 카드는 아끼며, 다우트는 확실할 때만 겁니다.</p>
           <ul>
