@@ -398,3 +398,14 @@ ol.legend li::before { content: counter(lg); flex: none; width: 22px; height: 22
 .toc-chips a b { color: var(--accent); }
 .mock .ic img { width: 100%; height: 100%; border-radius: inherit; display: block; }
 .mock .num { display: inline-grid; place-items: center; width: 15px; height: 15px; border-radius: 50%; background: #F97A4A; color: #1B1D22; font-size: 10px; font-weight: 900; font-style: normal; margin-right: 4px; vertical-align: 1px; }
+/* 휴대폰 폭의 표: 글자가 한 칸에 몰려 다른 칸이 한 글자 폭으로 눌리지 않게. .stack 표는 줄마다 위아래로 쌓아 카드처럼 */
+@media (max-width: 640px) {
+  th, td { padding: 11px 14px; }
+  .table-wrap.stack td b { white-space: normal; }
+  .table-wrap.stack table, .table-wrap.stack tbody, .table-wrap.stack tr, .table-wrap.stack td { display: block; width: 100%; }
+  .table-wrap.stack thead { display: none; }
+  .table-wrap.stack tr { border-bottom: 1px solid var(--line); padding: 12px 0; }
+  .table-wrap.stack tr:last-child { border-bottom: 0; }
+  .table-wrap.stack td { border: 0; padding: 2px 16px; }
+  .table-wrap.stack td:first-child { padding-bottom: 4px; font-size: 16px; }
+}
